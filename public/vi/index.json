@@ -1,0 +1,50 @@
+[
+{
+	"uri": "/vi/1-install-vscode/",
+	"title": "Cài đặt Visual Studio Code",
+	"tags": [],
+	"description": "",
+	"content": "Cài đặt VSCode Đi đến trang download Visual Studio Code.\nChọn bản phù hợp với hệ điều hành và ấn download Tiến hành cài đặt Visual Studio Code theo các bước sau đây Sau khi cài đặt xong ta sẽ được Visual Studio Code khởi chạy với giao diện sau "
+},
+{
+	"uri": "/vi/",
+	"title": "Hướng Dẫn SSH Tới EC2 Cho Người Mới Bắt Đầu",
+	"tags": [],
+	"description": "",
+	"content": "Tổng quan Trong phạm vi Workshop này, chúng ta sẽ tìm hiểu cách kết nối SSH từ Visual Studio Code đến Instance EC2 của AWS. Việc thực hiện kết nối từ xa mang lại nhiều lợi ích cho người làm việc từ xa hoặc là đối với nhiều người thì việc code trên máy cá nhân mình là thói quen thì khi có thể kết nối tới một máy chủ như thế giúp họ thao tác nhanh hơn cũng như có thể debug và kết hợp nhiều công cụ khác một cách dễ dàng hơn.\nSSH (Secure Shell) SSH (Secure Shell) là một giao thức mạng được sử dụng để thiết lập kết nối an toàn giữa hai máy tính, thường là giữa máy tính của người dùng và một máy chủ từ xa. SSH cho phép người dùng đăng nhập vào máy chủ từ xa và thực hiện các lệnh trong môi trường dòng lệnh, truyền dữ liệu, hoặc quản lý các dịch vụ và ứng dụng một cách an toàn.\nCác đặc điểm chính của SSH: Bảo mật: SSH mã hóa tất cả dữ liệu truyền giữa hai máy, giúp bảo vệ thông tin khỏi bị nghe lén hoặc tấn công bởi bên thứ ba. Xác thực: SSH yêu cầu xác thực người dùng thông qua mật khẩu hoặc khóa SSH (SSH key), giúp ngăn chặn truy cập trái phép. Khả năng chuyển tiếp cổng (Port Forwarding): SSH có thể được sử dụng để chuyển tiếp các cổng từ máy khách đến máy chủ hoặc ngược lại, hỗ trợ truy cập các dịch vụ mạng thông qua một đường kết nối bảo mật. AWS EC2 (Elastic Compute Cloud) EC2 (Elastic Compute Cloud) là một dịch vụ của Amazon Web Services (AWS) cung cấp khả năng tính toán đám mây linh hoạt và có thể mở rộng. Nói một cách đơn giản, EC2 cho phép bạn tạo và quản lý các máy chủ ảo (gọi là \u0026ldquo;instances\u0026rdquo;) trong môi trường đám mây AWS, mà bạn có thể sử dụng để chạy các ứng dụng, lưu trữ dữ liệu, hoặc thực hiện các tác vụ tính toán khác.\nNội dung chính Cài đặt Visual Studio Code Tạo EC2 Instance SSH từ VSCode tới EC2 Dọn dẹp tài nguyên "
+},
+{
+	"uri": "/vi/2-create-ec2/",
+	"title": "Tạo EC2 Instance",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Instance Truy cập vào EC2 Management Console bằng cách gõ và chọn dịch vụ EC2 trong thanh tìm kiếm. Chọn Launch Instance để bắt đầu tạo Instance. Tại màn hình tạo Instance đặt tên phù hợp với mục đích sử dụng. Chọn hệ điều hành Ubuntu với AMI là Ubuntu Server 24.04 (Free Tier Eligible) và Architecture là 64-bit. Instance Type sẽ chọn là t2.micro. Tiếp theo ta sẽ tạo mới 1 key pair trong trường hợp bạn chưa có key pair còn nếu có rồi thì cứ việc sử dụng key pair cũ. Khi tạo key pair ta sẽ lưu file .pem ở thư mục mà chúng ta cần làm việc để thuận tiện cho việc sử dụng ở bước sau. Key pair sau khi tải về sẽ được lưu ở đây Ở phần Network ta sẽ chọn Security Group có sẵn để sử dụng. Dung lượng của Instance sẽ để mặc định Ở bên phải ta sẽ xem được tổng thể về Instance khi được tạo sẽ có thông số như thế nào. Ta kiểm tra qua một lượt nếu không có vấn đề gì thì ấn Launch Instance Kiểm tra trạng thái của Instance nếu giống như hình sau thì đã tạo thành công "
+},
+{
+	"uri": "/vi/3-remote-ssh-vscode-to-ec2/",
+	"title": "SSH từ VSCode tới EC2",
+	"tags": [],
+	"description": "",
+	"content": " Sau khi khởi tạo thành công EC2 Instance ở bước trước ta tiếp tục thực hiện cấu hình Security Group để có thể truy cập bằng SSH Mở Visual Studio Code và thực hiện cài đặt Extension theo các bước sau Khi thấy phần install lúc nãy chuyển sang như vậy thì đã cài đặt thành công Thực hiện SSH từ Visual Studio Code tới EC2 Instance Sau đó quay lại EC2 Instance và thực hiện như sau Ta copy dòng được đánh dấu trong đây và quay lại Visual Studio Code Ở đây ta thấy dòng được đánh dấu có 1 đoạn là \u0026ldquo;path/singapore-key.pem\u0026rdquo; thì ngay chữ path ta sẽ thay thế bằng đường dẫn đến folder chứa file key pair của chúng ta Sau khi thực hiện xong thì bạn đã hoàn tất việc SSH từ Visual Studio Code đến EC2 Instance. Chúc bạn thành công\n"
+},
+{
+	"uri": "/vi/4-clean-up/",
+	"title": "Dọn dẹp tài nguyên",
+	"tags": [],
+	"description": "",
+	"content": "Chúng ta sẽ dọn dẹp tài nguyên theo thứ tự như sau: Xóa EC2 Instance:\nTruy cập EC2 Dashboard chọn Instance (running) Chọn Instance cần xóa và chọn Instance state Trong Instance state chọn Terminate instance Xem trạng thái của Instance đã chuyển qua Terminated thì đã xóa thành công "
+},
+{
+	"uri": "/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
