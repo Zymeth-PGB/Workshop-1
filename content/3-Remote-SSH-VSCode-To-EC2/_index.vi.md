@@ -33,4 +33,4 @@ pre = "<b>3. </b>"
    - Ở đây ta thấy dòng được đánh dấu có 1 đoạn là **"path/singapore-key.pem"** thì ngay chữ **path** ta sẽ thay thế bằng đường dẫn đến **folder chứa file key pair** của chúng ta
 ![Image](/Workshop-2/images/3/12.png)
 
-4. Sau khi thực hiện xong thì bạn đã hoàn tất việc **SSH** từ **Visual Studio Code** đến **EC2 Instance**. Chúc bạn thành công
+4. Sau khi thực hiện xong thì bạn đã hoàn tất việc **SSH** từ **Visual Studio Code** đến **EC2 Instance**. Chúc bạn thành công 
